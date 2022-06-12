@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Dalang App</string>
+    <string name="enter" translatable="false">Enter</string>
+    <string name="harap_isi">Please fill correctly</string>
+    <string name="title_activity_settings" translatable="false">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="lang_header">Language</string>
+    <string name="theme_header">Theme</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title" translatable="false">Your signature</string>
+    <string name="reply_title" translatable="false">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title" translatable="false">Sync email periodically</string>
+    <string name="theme_title">Dark Theme</string>
+    <string name="theme_summary_on">Dark
+    </string>
+    <string name="theme_summary_off" translatable="false">Default</string>
+    <string name="start_classify_wayang">Start Classify Wayang</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="welcome_subtext">Let’s discover \nand learn more about Wayang</string>
+    <string name="learn_btn">Learn</string>
+    <string name="show_more">Show More</string>
+    <string name="more_knowledge">More Knowledge</string>
+    <string name="wayang_gallery">Wayang Gallery</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="sign_up" translatable="false">Sign Up</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="nama">Name</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_in" translatable="false">Sign In</string>
+    <string name="start_prediction">Start Prediction</string>
+    <string name="gallery" translatable="false">Gallery</string>
+    <string name="result_title" translatable="false">Title</string>
+    <string name="camera">Camera</string>
+    <string name="belum_punya_akun">Don\'t have an account yet ?</string>
+    <string name="sudah_punya_akun">Already have an account ?</string>
+    <string name="pilih_bahasa">Choose Language</string>
+    <string name="pilih_bahasa_sum">Choose App Language</string>
+    <string name="classified_as">Classified as</string>
+    <string name="show_wayang_type">Show Wayang Type</string>
+    <string name="card_wayang_golek" translatable="false">Wayang Golek</string>
+    <string name="card_golek_desk" translatable="false">Wayang merupakan pertunjukan diketahui berkembang sejak sebelum abad ke-10. Wayang terkenal dengan pertunjukannya yang rumit dan diatur dan bentuk cerita kuno ini berasal dari pulau Jawa di Indonesia...</string>
+    <string name="read_more">Read more</string>
+    <string name="card_wayang_kulit" translatable="false">Wayang Kulit</string>
+    <string name="card_kulit_desc" translatable="false">Wayang kulit dibuat dari bahan kulit sapi yang sudah diproses menjadi kulit lembaran. Wayang kulit dimainkan oleh seorang dalang yang juga menjadi narator dialog tokoh-tokoh wayang, dengan diiringi oleh musik gamelan yang dimainkan sekelompok nayaga dan tembang yang dinyanyikan oleh para pesinden.</string>
+    <string name="card_golek_desc2" translatable="false">Wayang golek merupakan salah satu merupakan warisan budaya Indonesia yang terdapat di daerah sunda jawa barat. Wayang golek merupakan sebuah pertunjukan wayang dari boneka kayu. Seperti wayang pada umumnya wayang golek diiringi oleh musik ketika ditampilkan. Biasanya dari alat music gamelan yang sering disebut slendro.</string>
+    <string name="card_krucil_desc" translatable="false">Wayang Krucil atau Wayang Klithik merupakan salah satu bentuk seni pertunjukan yang menggunakan wayang berukuran kecil, terbuat dari kayu pipih (waru, pinus, atau mentaos) dengan tangan terbuat dari kulit sehingga mudah digerak-gerakkan oleh dalang.</string>
+    <string name="card_suluh_desc" translatable="false">Wayang Suluh adalah wayang yang terbuat dari kulit dan berbentuk manusia biasa, dengan tokoh wayang keseharian, misalnya P Lurah, P Haji, Ibu Guru, Bapak Guru, petani, saudagar, anak sekolah, mahasiswa dan lainya. Ceritanya pun tentang permasalahan sehari-hari dalam keluarga, masyarakat,dan kehidupan masyarakat pedesaan, sangat sederhana sesuai dengan keadaan masyarakat waktu itu.</string>
+    <string name="card_gedog_desc" translatable="false">Wayang Gedog atau Wayang Panji adalah wayang yang memakai cerita dari serat Panji. Wayang ini mungkin telah ada sejak zaman Majapahit. Bentuk wayangnya hampir sama dengan wayang purwa. Tokoh-tokoh kesatria selalu memakai tekes dan rapekan. Tokoh-tokoh rajanya memakai garuda mungkur dan gelung keling.</string>
+    <string name="classified_as_please">Please</string>
+    <string name="select_first">Select/Pick An Image First</string>
+    <string name="learn_desc" translatable="false">ABC</string>
+    <string name="learn_desc2" translatable="false">Wayang merupakan pertunjukan diketahui berkembang sejak sebelum abad ke-10. Wayang terkenal dengan pertunjukannya yang rumit dan diatur dan bentuk cerita kuno ini berasal dari pulau Jawa di Indonesia. Istilah pewayangan, berasal dari kata Indonesia untuk "bayangan". \n\nWayang kulit dengan menggunakan figur yang terbuat dari kulit kerbau, dianggap sebagai bentuk wayang tertua yang berdiri sendiri, referensi paling awal untuk wayang jenis itu berasal dari tahun 800-an. Namun, sebenarnya banyak versi terkait sejarah wayang dan bagaimana wayang pertama kali menjadi tradisi pertunjukan di Indonesia. Mengutip laman Education Asian Art, seorang pujangga istana pada masa pemerintahan Raja Airlangga (1035-1049) menulis: “Ada orang yang menangis, sedih, dan terharu melihat wayang, padahal mereka tahu bahwa itu hanyalah potongan-potongan kulit yang diukir yang dimanipulasi dan dibuat untuk berbicara.
+</string>
+</resources>

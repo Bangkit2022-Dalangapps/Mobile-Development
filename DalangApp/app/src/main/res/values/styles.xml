@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light"> </style>
+    <style name="AppTheme" parent="AppBaseTheme"> </style>
+
+    <style name="buttonScanWhite" parent="ThemeOverlay.AppCompat">
+        <item name="backgroundTint">#FFC884</item>
+        <item name="android:textColor"> @color/black</item>
+        <item name="drawableEndCompat">@drawable/scan_icon_black</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="buttonSettingWhite" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@android:color/white</item>
+        <item name="cornerRadius">17dp</item>
+        <item name="android:textColor"> @color/black</item>
+    </style>
+
+    <style name="textTitleSetting" parent="ThemeOverlay.AppCompat">
+        <item name="android:textColor">@color/medium_brown</item>
+    </style>
+</resources>

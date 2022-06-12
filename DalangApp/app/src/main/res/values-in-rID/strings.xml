@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dalang App</string>
+    <string name="belum_punya_akun">Belum punya akun ?</string>
+    <string name="nama">Nama</string>
+    <string name="confirm_password">Konfirmasi Password</string>
+    <string name="sudah_punya_akun">Sudah punya akun ?</string>
+    <string name="start_prediction">Mulai Prediksi</string>
+    <string name="camera">Kamera</string>
+    <string name="harap_isi">Mohon isi dengan benar</string>
+    <string name="lang_header">Bahasa</string>
+    <string name="theme_header">Tema</string>
+    <string name="theme_title">Tema Gelap</string>
+    <string name="theme_summary_on">Gelap</string>
+    <string name="start_classify_wayang">Mulai Klasifikasi Wayang</string>
+    <string name="welcome_text">Selamat Datang</string>
+    <string name="welcome_subtext">Mari memulai \ndan belajar lebih tentang wayang</string>
+    <string name="learn_btn">Mulai</string>
+    <string name="show_more">Tampilkan Lebih</string>
+    <string name="more_knowledge">Ilmu Tambahan</string>
+    <string name="wayang_gallery">Gallery Wayang</string>
+    <string name="pilih_bahasa">Pilih Bahasa</string>
+    <string name="pilih_bahasa_sum">Pilih bahasa aplikasi</string>
+    <string name="classified_as">Terklasifikasi sebagai</string>
+    <string name="show_wayang_type">Tampilkan Tipe Wayang</string>
+    <string name="read_more">Baca</string>
+    <string name="classified_as_please">Mohon</string>
+    <string name="select_first">Ambil/Pilih Gambar Dahulu</string>
+</resources>

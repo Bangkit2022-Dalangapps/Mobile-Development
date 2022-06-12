@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".content.WayangGalleryActivity">
+
+    <Button
+        android:id="@+id/btn_backToHome"
+        style="@style/buttonSettingWhite"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/white"
+        android:drawableEnd="@drawable/ic_baseline_arrow_back_24_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/wayang_gallery"
+        android:textColor="#7B4310"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear_satu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_backToHome">
+
+        <ImageView
+            android:id="@+id/iv_beber"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/wayang_beber_icon" />
+
+        <ImageView
+            android:id="@+id/iv_gedog"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/wayang_gedog_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_dua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_satu">
+
+        <ImageView
+            android:id="@+id/iv_golek"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/wayang_golek_icon" />
+
+        <ImageView
+            android:id="@+id/iv_kulit"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/wayang_kulit_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_dua">
+
+        <ImageView
+            android:id="@+id/iv_krucil"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/wayang_krucil_icon" />
+
+        <ImageView
+            android:id="@+id/iv_suluh"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/ripple_effect"
+            android:src="@drawable/wayang_suluh_icon" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

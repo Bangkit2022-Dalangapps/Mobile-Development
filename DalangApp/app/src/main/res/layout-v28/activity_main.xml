@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginBottom="400dp"
+            android:src="@drawable/mandala_background2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_settings"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_settings_24" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/welcome_text"
+            android:textColor="#7B4310"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/welcome_subtext"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_welcome"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+        <ImageView
+            android:id="@+id/iv_startLearnBanner"
+            android:layout_width="420dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/roboto_bold"
+            android:src="@drawable/start_learn2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_startLearingWayang"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/learn_btn"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/iv_startLearnBanner"
+            app:layout_constraintEnd_toEndOf="@+id/iv_startLearnBanner"
+            app:layout_constraintTop_toTopOf="@id/iv_startLearnBanner"
+            app:rippleColor="@color/white"
+            app:strokeColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_scanWayang"
+            style="@style/buttonScanWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ripple_effect"
+            android:drawableEnd="@drawable/scan_icon_black"
+            android:elevation="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="2dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="@string/start_classify_wayang"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_startLearnBanner" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/gallery"
+            android:textColor="#7B4310"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_scanWayang" />
+
+        <TextView
+            android:id="@+id/tv_showMoreGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/show_more"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/iv_gallery"
+            app:layout_constraintEnd_toEndOf="@id/iv_gallery" />
+
+
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/gallery_dummy1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_scanWayang" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/more_knowledge"
+            android:textColor="#7B4310"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_gallery" />
+
+        <TextView
+            android:id="@+id/tv_showMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/show_more"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/iv_gallery"
+            app:layout_constraintTop_toBottomOf="@id/iv_gallery" />
+
+        <HorizontalScrollView
+            android:id="@+id/h_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/iv_gallery"
+            app:layout_constraintStart_toStartOf="@id/iv_gallery"
+            app:layout_constraintTop_toBottomOf="@id/iv_gallery">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/iv_bio_dalang"
+                    android:layout_width="180dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/bio_dalang3"
+                    android:backgroundTint="#E3E3E3"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:src="@drawable/bio_dalang3" />
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/studio_museum2" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/studio_museum2" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="40dp"
+                    android:src="@drawable/studio_museum" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

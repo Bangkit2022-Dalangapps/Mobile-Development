@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginVertical="10dp"
+    android:foreground="?attr/selectableItemBackground"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/img_item_photo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="5dp"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLength="20"
+            card_view:layout_constraintStart_toEndOf="@id/img_item_photo"
+            card_view:layout_constraintTop_toTopOf="@id/img_item_photo"
+            tools:text="Nama"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_item_desk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/black"
+            android:layout_toEndOf="@id/img_item_photo"
+            android:maxLength="20"
+            android:textSize="16sp"
+            card_view:layout_constraintStart_toEndOf="@id/img_item_photo"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+            tools:text="Ini adalah deskripsi" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

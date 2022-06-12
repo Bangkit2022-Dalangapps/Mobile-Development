@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_backToHome"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_arrow_back_24_black" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_camera"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_backToHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_backToHome">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:contentDescription="Capture from camera"
+                android:padding="3dp"
+                android:src="@drawable/ic_outline_photo_camera_24_black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_gallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_camera">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/ic_outline_image_search_24_black" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/iv_image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_classify_as"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="@string/classified_as"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_image_preview" />
+
+
+        <TextView
+            android:id="@+id/tv_result_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/result_title"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_classify_as" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_golek"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_learn_more_image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/wayang_golak_dummy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:text="@string/card_wayang_golek"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_learn_more_image"
+                    app:layout_constraintTop_toTopOf="@id/iv_learn_more_image" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_desc"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:maxLines="6"
+                    android:text="@string/card_golek_desc2"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_title" />
+
+                <Button
+                    android:id="@+id/btn_card_golek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/read_more"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_desc"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_desc" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_kulit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_learn_more_image2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/wayang_kulit_dummy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:text="@string/card_wayang_kulit"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_learn_more_image2"
+                    app:layout_constraintTop_toTopOf="@id/iv_learn_more_image2" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_desc2"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:maxLines="6"
+                    android:text="@string/card_kulit_desc"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_title2"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_title2" />
+
+                <Button
+                    android:id="@+id/btn_card_kulit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/read_more"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_desc2"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_desc2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_krucil"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_learn_more_image3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/wayang_krucil_dummy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:text="Wayang Krucil"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_learn_more_image3"
+                    app:layout_constraintTop_toTopOf="@id/iv_learn_more_image3" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_desc3"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:maxLines="6"
+                    android:text="@string/card_krucil_desc"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_title3"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_title3" />
+
+                <Button
+                    android:id="@+id/btn_card_krucil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/read_more"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_desc3"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_desc3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_gedog"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_learn_more_image4"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/wayang_gedog_dummy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:text="Wayang Gedog"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_learn_more_image4"
+                    app:layout_constraintTop_toTopOf="@id/iv_learn_more_image4" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_desc4"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:maxLines="6"
+                    android:text="@string/card_gedog_desc"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_title4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_title4" />
+
+                <Button
+                    android:id="@+id/btn_card_gedog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/read_more"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_desc4"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_desc4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_suluh"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_learn_more_image5"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/wayang_suluh_dummy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_title5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:text="Wayang Suluh"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_learn_more_image5"
+                    app:layout_constraintTop_toTopOf="@id/iv_learn_more_image5" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_desc5"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:maxLines="6"
+                    android:text="@string/card_suluh_desc"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_title5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_title5" />
+
+                <Button
+                    android:id="@+id/btn_card_suluh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/read_more"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_desc5"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_desc5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_beber"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_corner"
+            android:foreground="?attr/selectableItemBackground"
+            android:visibility="gone"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_result_title">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_learn_more_image6"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/wayang_beber_dummy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_title6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="27dp"
+                    android:text="Wayang Beber"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/iv_learn_more_image6"
+                    app:layout_constraintTop_toTopOf="@id/iv_learn_more_image6" />
+
+                <TextView
+                    android:id="@+id/tv_learn_more_desc6"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:justificationMode="inter_word"
+                    android:maxLines="6"
+                    android:text="@string/card_suluh_desc"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_title6"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_title6" />
+
+                <Button
+                    android:id="@+id/btn_card_beber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/read_more"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_learn_more_desc6"
+                    app:layout_constraintTop_toBottomOf="@id/tv_learn_more_desc6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,24 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/lang_header"
+        app:key="bahasa">
+
+        <Preference
+            app:key="lang"
+            app:summary="@string/pilih_bahasa_sum"
+            app:title="@string/pilih_bahasa" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Log Out"
+        app:key="logout">
+
+        <Preference
+            app:key="endsession"
+            app:summary="End the login session"
+            app:title="Log Out" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
