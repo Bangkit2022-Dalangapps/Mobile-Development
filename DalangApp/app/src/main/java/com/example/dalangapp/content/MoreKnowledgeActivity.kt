@@ -2,15 +2,13 @@ package com.example.dalangapp.content
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dalangapp.MainActivity
-import com.example.dalangapp.R
 import com.example.dalangapp.databinding.ActivityMoreKnowledgeBinding
 
 class MoreKnowledgeActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityMoreKnowledgeBinding
+    private lateinit var binding: ActivityMoreKnowledgeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

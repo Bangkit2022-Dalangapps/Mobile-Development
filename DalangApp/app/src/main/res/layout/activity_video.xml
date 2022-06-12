@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".content.VideoActivity"
-    android:layout_gravity="top">
-
+    android:layout_gravity="top"
+    tools:context=".content.VideoActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/btn_backToHome"
@@ -31,53 +30,50 @@
 
     <VideoView
         android:id="@+id/videoView1"
-        android:foregroundGravity="top"
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:foregroundGravity="top"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_judul_video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lima Teknik Dasar Cepengan Wayang"
-        android:textSize="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_bold"
+        android:text="@string/lima_teknik_dasar_cepengan_wayang"
         android:textColor="@color/medium_brown"
-        app:layout_constraintTop_toBottomOf="@id/videoView1"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginHorizontal="20dp"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/videoView1" />
 
     <TextView
-        android:layout_width="match_parent"
         android:id="@+id/tv_desc_video"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Video ini berisikan pengetahuan tentang salah satu unsur garap pakeliran, yaitu unsur garap sabet. Secara khusus adalah teknik dasar cepengan (cara memegang) wayang gaya Surakarta. Video ini dibuat untuk yang sedang belajar mendalang atau masyarakat awam yang cinta dan peduli dengabmn seni pedalangan."
-        app:layout_constraintTop_toBottomOf="@id/tv_judul_video"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="20dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
         android:justificationMode="inter_word"
-        />
+        android:text="@string/desc_video"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_judul_video" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sumber : YT Catur Nugroho"
-        app:layout_constraintTop_toBottomOf="@id/tv_desc_video"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginHorizontal="20dp"
-        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
         android:justificationMode="inter_word"
-        />
+        android:text="@string/sumber_vide"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_desc_video" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

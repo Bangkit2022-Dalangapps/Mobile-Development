@@ -26,4 +26,10 @@
     <string name="read_more">Baca</string>
     <string name="classified_as_please">Mohon</string>
     <string name="select_first">Ambil/Pilih Gambar Dahulu</string>
+    <string name="dalang_biography">Biografi Dalang</string>
+    <string name="other_information">Informasi Tambahan</string>
+    <string name="language">Bahasa</string>
+    <string name="shop_and_workshop">Toko dan Workshop</string>
+    <string name="wayang_stories">Cerita Wayang</string>
+    <string name="studio_and_museum">Studio dan Museum</string>
 </resources>

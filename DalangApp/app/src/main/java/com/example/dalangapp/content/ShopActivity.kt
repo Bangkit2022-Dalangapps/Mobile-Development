@@ -2,21 +2,17 @@ package com.example.dalangapp.content
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dalangapp.MainActivity
-import com.example.dalangapp.R
 import com.example.dalangapp.adapter.ShopAdapter
-import com.example.dalangapp.adapter.StoriesAdapter
 import com.example.dalangapp.content.detail.DetailActivity
 import com.example.dalangapp.databinding.ActivityShopBinding
-import com.example.dalangapp.databinding.ActivityStoriesBinding
 import com.example.dalangapp.retrofit.ApiConfig
 import com.example.dalangapp.retrofit.responses.ListShopItems
-import com.example.dalangapp.retrofit.responses.ListStoryItems
 import com.example.dalangapp.retrofit.responses.ShopResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -25,7 +21,7 @@ import retrofit2.Response
 class ShopActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityShopBinding
-    private lateinit var adapter : ShopAdapter
+    private lateinit var adapter: ShopAdapter
 
     private lateinit var sharedPreferences: SharedPreferences
     val listShopItems = ArrayList<ListShopItems>()
@@ -48,10 +44,10 @@ class ShopActivity : AppCompatActivity() {
         }
     }
 
-    private fun setShop(){
+    private fun setShop() {
         showLoading(true)
         val service = ApiConfig.getApiService(this).getShop()
-        service.enqueue(object : Callback<ShopResponse>{
+        service.enqueue(object : Callback<ShopResponse> {
             override fun onResponse(call: Call<ShopResponse>, response: Response<ShopResponse>) {
                 if (response.isSuccessful) {
                     showLoading(false)
@@ -83,7 +79,7 @@ class ShopActivity : AppCompatActivity() {
         })
     }
 
-    private fun initRv(){
+    private fun initRv() {
         adapter = ShopAdapter()
         binding.apply {
             rvMcv.layoutManager = LinearLayoutManager(this@ShopActivity)
@@ -96,7 +92,7 @@ class ShopActivity : AppCompatActivity() {
                         it.putExtra(DetailActivity.EXTRA_PHOTO, data.photoUrl)
                         it.putExtra(DetailActivity.EXTRA_NAME, data.name)
                         it.putExtra(DetailActivity.EXTRA_DESK, data.description)
-                        it.putExtra(DetailActivity.EXTRA_DESK1, "Link Pembelian : "+data.linkUrl)
+                        it.putExtra(DetailActivity.EXTRA_DESK1, "Link Pembelian : " + data.linkUrl)
                         startActivity(it)
                     }
                 }

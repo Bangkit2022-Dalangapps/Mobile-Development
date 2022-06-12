@@ -12,26 +12,32 @@ import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import com.example.dalangapp.R
 
-class MyPassEditText : AppCompatEditText, View.OnTouchListener{
+class MyPassEditText : AppCompatEditText, View.OnTouchListener {
 
-    private lateinit var clearButtonImage : Drawable
+    private lateinit var clearButtonImage: Drawable
 
     constructor(context: Context) : super(context) {
         init()
     }
+
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
         init()
     }
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    ) {
         init()
     }
 
     private fun setButtonDrawables(
-        startOfTheText : Drawable? = null,
-        topOfTheText : Drawable? = null,
-        endOfTheText : Drawable? = null,
-        bottomOfTheText : Drawable? = null,
-    ){
+        startOfTheText: Drawable? = null,
+        topOfTheText: Drawable? = null,
+        endOfTheText: Drawable? = null,
+        bottomOfTheText: Drawable? = null,
+    ) {
         setCompoundDrawablesWithIntrinsicBounds(
             startOfTheText,
             topOfTheText,
@@ -40,11 +46,11 @@ class MyPassEditText : AppCompatEditText, View.OnTouchListener{
         )
     }
 
-    private fun showClearButton(){
+    private fun showClearButton() {
         setButtonDrawables(endOfTheText = clearButtonImage)
     }
 
-    private fun hideClearButton(){
+    private fun hideClearButton() {
         setButtonDrawables()
     }
 
@@ -72,14 +78,16 @@ class MyPassEditText : AppCompatEditText, View.OnTouchListener{
             if (isClearButtonClicked) {
                 when (event.action) {
                     MotionEvent.ACTION_DOWN -> {
-                        clearButtonImage = ContextCompat.getDrawable(context,
+                        clearButtonImage = ContextCompat.getDrawable(
+                            context,
                             R.drawable.ic_close_black_24dp
                         ) as Drawable
                         showClearButton()
                         return true
                     }
                     MotionEvent.ACTION_UP -> {
-                        clearButtonImage = ContextCompat.getDrawable(context,
+                        clearButtonImage = ContextCompat.getDrawable(
+                            context,
                             R.drawable.ic_close_black_24dp
                         ) as Drawable
                         when {
@@ -95,8 +103,9 @@ class MyPassEditText : AppCompatEditText, View.OnTouchListener{
         return false
     }
 
-    private fun init(){
-        clearButtonImage = ContextCompat.getDrawable(context, R.drawable.ic_close_black_24dp) as Drawable
+    private fun init() {
+        clearButtonImage =
+            ContextCompat.getDrawable(context, R.drawable.ic_close_black_24dp) as Drawable
         setOnTouchListener(this)
 
         addTextChangedListener(object : TextWatcher {
@@ -104,11 +113,13 @@ class MyPassEditText : AppCompatEditText, View.OnTouchListener{
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
                 // Do nothing.
             }
+
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
                 if (s.toString().isNotEmpty()) showClearButton() else hideClearButton()
             }
+
             override fun afterTextChanged(s: Editable) {
-                if (s.length < 6){
+                if (s.length < 6) {
                     error = "Password min 6 digit"
                 }
             }

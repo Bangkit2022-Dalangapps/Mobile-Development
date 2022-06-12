@@ -87,12 +87,6 @@ class RegisterActivity : AppCompatActivity() {
             val thisPassword = binding.idMyPassEt.text.toString()
             val thisConfPassword = binding.idMyConfirmPassEt.text.toString()
             startRegister(thisName, thisEmail, thisPassword, thisConfPassword)
-
-//            Toast.makeText(
-//                this,
-//                "Name $thisName, Email $thisEmail, Pass $thisPassword, Conf $thisConfPassword",
-//                Toast.LENGTH_SHORT
-//            ).show()
         }
 
         binding.idToSignInTv.setOnClickListener {

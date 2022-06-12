@@ -3,7 +3,6 @@ package com.example.dalangapp.retrofit
 import com.example.dalangapp.retrofit.responses.*
 import retrofit2.Call
 import retrofit2.http.*
-import java.lang.StringBuilder
 
 interface ApiService {
 
@@ -46,7 +45,7 @@ interface ApiService {
 
     @GET("/Wayangs/{id}")
     fun getWayang(
-        @Path("id") id : Int
+        @Path("id") id: Int
     ): Call<WayangResponse>
 
 }

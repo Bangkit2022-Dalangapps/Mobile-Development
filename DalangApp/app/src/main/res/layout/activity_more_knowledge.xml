@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="More Knowledge"
+        android:text="@string/more_knowledge"
         android:textColor="#7B4310"
         android:textSize="25sp"
         android:textStyle="bold"

@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var myEmailEditText: MyEditText
     private lateinit var myPassEditText: MyPassEditText
     private lateinit var edToRegister: TextView
-    private lateinit var progressBar : ProgressBar
+    private lateinit var progressBar: ProgressBar
 
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var sessionManager: SessionManager
@@ -38,10 +38,6 @@ class LoginActivity : AppCompatActivity() {
     private var SHARED_PREF_NAME = "mypref"
     private var KEY_ID = "key_id"
     private var KEY_NAME = "key_name"
-    private var KEY_EMAIL = "key_email"
-    private var KEY_RETOKEN = "key_retoken"
-    private var KEY_TOKEN = "key_retoken"
-    private var KEY_PASSWORD = "key_password"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,8 +55,6 @@ class LoginActivity : AppCompatActivity() {
 
 
         sharedPreferences = getSharedPreferences(SHARED_PREF_NAME, MODE_PRIVATE)
-        val token = sharedPreferences.getString(KEY_TOKEN, null)
-        val retoken = sharedPreferences.getString(KEY_RETOKEN, null)
         val id = sharedPreferences.getString(KEY_ID, null)
         if (id != null) {
             val i = Intent(this, MainActivity::class.java)
@@ -68,8 +62,7 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
-//        val i = Intent(this, MainActivity::class.java)
-//        startActivity(i)
+
 
         myEmailEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
@@ -101,8 +94,6 @@ class LoginActivity : AppCompatActivity() {
             val thisEmail = myEmailEditText.text.toString()
             val thisPassword = myPassEditText.text.toString()
             startLogin(thisEmail, thisPassword)
-
-//            Toast.makeText(this, "Email $thisEmail, Pass $thisPassword", Toast.LENGTH_SHORT).show()
         }
 
         edToRegister.setOnClickListener {

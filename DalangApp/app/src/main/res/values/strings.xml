@@ -23,7 +23,6 @@
     <string name="welcome_subtext">Let’s discover \nand learn more about Wayang</string>
     <string name="learn_btn">Learn</string>
     <string name="show_more">Show More</string>
-    <string name="more_knowledge">More Knowledge</string>
     <string name="wayang_gallery">Wayang Gallery</string>
     <string name="login" translatable="false">Login</string>
     <string name="sign_up" translatable="false">Sign Up</string>
@@ -57,4 +56,15 @@
     <string name="learn_desc" translatable="false">ABC</string>
     <string name="learn_desc2" translatable="false">Wayang merupakan pertunjukan diketahui berkembang sejak sebelum abad ke-10. Wayang terkenal dengan pertunjukannya yang rumit dan diatur dan bentuk cerita kuno ini berasal dari pulau Jawa di Indonesia. Istilah pewayangan, berasal dari kata Indonesia untuk "bayangan". \n\nWayang kulit dengan menggunakan figur yang terbuat dari kulit kerbau, dianggap sebagai bentuk wayang tertua yang berdiri sendiri, referensi paling awal untuk wayang jenis itu berasal dari tahun 800-an. Namun, sebenarnya banyak versi terkait sejarah wayang dan bagaimana wayang pertama kali menjadi tradisi pertunjukan di Indonesia. Mengutip laman Education Asian Art, seorang pujangga istana pada masa pemerintahan Raja Airlangga (1035-1049) menulis: “Ada orang yang menangis, sedih, dan terharu melihat wayang, padahal mereka tahu bahwa itu hanyalah potongan-potongan kulit yang diukir yang dimanipulasi dan dibuat untuk berbicara.
 </string>
+    <string name="dalang_biography">Dalang Biography</string>
+    <string name="other_information">Other information</string>
+    <string name="wayang" translatable="false">Wayang</string>
+    <string name="more_knowledge">More Knowledge</string>
+    <string name="language">Language</string>
+    <string name="shop_and_workshop">Shop and Workshop</string>
+    <string name="wayang_stories">Wayang Stories</string>
+    <string name="studio_and_museum">Studio and Museum</string>
+    <string name="lima_teknik_dasar_cepengan_wayang" translatable="false">Lima Teknik Dasar Cepengan Wayang</string>
+    <string name="desc_video" translatable="false">Video ini berisikan pengetahuan tentang salah satu unsur garap pakeliran, yaitu unsur garap sabet. Secara khusus adalah teknik dasar cepengan (cara memegang) wayang gaya Surakarta. Video ini dibuat untuk yang sedang belajar mendalang atau masyarakat awam yang cinta dan peduli dengabmn seni pedalangan.</string>
+    <string name="sumber_vide" translatable="false">Sumber : YT Catur Nugroho</string>
 </resources>

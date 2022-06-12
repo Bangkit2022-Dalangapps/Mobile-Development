@@ -21,7 +21,6 @@ class VideoActivity : AppCompatActivity() {
         val mediaController = android.widget.MediaController(this)
         mediaController.setAnchorView(binding.videoView1)
 
-        val onlineUri: Uri = Uri.parse("")
         val offlineUri: Uri = Uri.parse("android.resource://$packageName/${R.raw.video}")
 
         binding.apply {

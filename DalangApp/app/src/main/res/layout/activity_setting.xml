@@ -10,40 +10,39 @@
         android:id="@+id/toLangSettings"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:foreground="?attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:foreground="?attr/selectableItemBackground"
-        android:layout_marginTop="15dp"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/lang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="Language"
+                android:text="@string/language"
                 android:textColor="@color/medium_brown"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/lang"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choose Application Language"
-                android:fontFamily="@font/montserrat_medium"
-                android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/lang"
-                app:layout_constraintStart_toStartOf="@id/lang"
                 android:layout_marginTop="5dp"
-                />
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Choose Application Language"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/lang"
+                app:layout_constraintTop_toBottomOf="@id/lang" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -53,40 +52,39 @@
         android:id="@+id/toLogOut"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_marginTop="15dp"
+        android:foreground="?attr/selectableItemBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toLangSettings"
-        android:foreground="?attr/selectableItemBackground"
-        android:layout_marginTop="15dp"
-        >
+        app:layout_constraintTop_toBottomOf="@id/toLangSettings">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Log Out"
                 android:textColor="@color/medium_brown"
                 android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:id="@+id/logout"/>
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Log Out and end the session"
-                android:fontFamily="@font/montserrat_medium"
-                android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/logout"
-                app:layout_constraintStart_toStartOf="@id/logout"
                 android:layout_marginTop="5dp"
-                />
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Log Out and end the session"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/logout"
+                app:layout_constraintTop_toBottomOf="@id/logout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

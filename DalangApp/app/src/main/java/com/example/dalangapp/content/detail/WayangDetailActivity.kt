@@ -1,10 +1,10 @@
 package com.example.dalangapp.content.detail
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.dalangapp.MainActivity
@@ -18,7 +18,7 @@ import retrofit2.Response
 
 class WayangDetailActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityWayangDetailBinding
+    private lateinit var binding: ActivityWayangDetailBinding
     val listWayangItems = ArrayList<WayangData>()
 
     companion object {
@@ -39,11 +39,11 @@ class WayangDetailActivity : AppCompatActivity() {
         setWayang()
     }
 
-    private fun setWayang(){
+    private fun setWayang() {
         showLoading(true)
         val id = intent.getStringExtra(EXTRA_ID)
         val service = id?.let { ApiConfig.getApiService(this).getWayang(it.toInt()) }
-        service?.enqueue(object : Callback<WayangResponse>{
+        service?.enqueue(object : Callback<WayangResponse> {
             override fun onResponse(
                 call: Call<WayangResponse>,
                 response: Response<WayangResponse>
@@ -55,7 +55,13 @@ class WayangDetailActivity : AppCompatActivity() {
                     if (responseBody != null) {
                         val dataBody = responseBody.data
                         response.body()?.data?.let { listWayangItems.addAll(listOf(it)) }
-                        setData(dataBody.name,dataBody.description, dataBody.origin, dataBody.source,dataBody.url)
+                        setData(
+                            dataBody.name,
+                            dataBody.description,
+                            dataBody.origin,
+                            dataBody.source,
+                            dataBody.url
+                        )
 
                     } else {
                         showLoading(false)
@@ -80,7 +86,13 @@ class WayangDetailActivity : AppCompatActivity() {
         })
     }
 
-    private fun setData(name : String,  description:String, origin: String, source : String, url: String){
+    private fun setData(
+        name: String,
+        description: String,
+        origin: String,
+        source: String,
+        url: String
+    ) {
         Glide.with(this)
             .load(url)
             .transition(DrawableTransitionOptions.withCrossFade())

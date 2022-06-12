@@ -12,8 +12,6 @@ import com.example.dalangapp.content.detail.WayangDetailActivity
 
 class SettingsActivity : AppCompatActivity() {
 
-    private lateinit var sharedPreferences: SharedPreferences
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings_activity)
@@ -30,8 +28,6 @@ class SettingsActivity : AppCompatActivity() {
 
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
-
-            val settingsActivity = SettingsActivity()
 
             val langPref: Preference? = findPreference("lang")
             val intent = Intent(Settings.ACTION_LOCALE_SETTINGS)

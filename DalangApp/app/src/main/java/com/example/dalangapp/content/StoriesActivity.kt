@@ -2,10 +2,10 @@ package com.example.dalangapp.content
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dalangapp.MainActivity
 import com.example.dalangapp.adapter.StoriesAdapter
@@ -20,8 +20,8 @@ import retrofit2.Response
 
 class StoriesActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityStoriesBinding
-    private lateinit var adapter : StoriesAdapter
+    private lateinit var binding: ActivityStoriesBinding
+    private lateinit var adapter: StoriesAdapter
 
     private lateinit var sharedPreferences: SharedPreferences
     val listStoryItem = ArrayList<ListStoryItems>()
@@ -44,10 +44,10 @@ class StoriesActivity : AppCompatActivity() {
         }
     }
 
-    private fun setStory(){
+    private fun setStory() {
         showLoading(true)
         val service = ApiConfig.getApiService(this).getStories()
-        service.enqueue(object : Callback<StoriesRespond>{
+        service.enqueue(object : Callback<StoriesRespond> {
             override fun onResponse(
                 call: Call<StoriesRespond>,
                 response: Response<StoriesRespond>
@@ -83,7 +83,7 @@ class StoriesActivity : AppCompatActivity() {
         })
     }
 
-    private fun initRv(){
+    private fun initRv() {
         adapter = StoriesAdapter()
         binding.apply {
             rvMcv.layoutManager = LinearLayoutManager(this@StoriesActivity)

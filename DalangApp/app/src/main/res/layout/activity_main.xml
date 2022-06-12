@@ -11,26 +11,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            android:background="#FFCB8E"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginBottom="400dp"
+            android:src="@drawable/mandala_background2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+
+        <androidx.cardview.widget.CardView
             android:id="@+id/btn_settings"
-            style="@style/buttonSettingWhite"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/white"
-            android:drawableEnd="@drawable/ic_baseline_settings_24"
             android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/ic_baseline_settings_24" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tv_welcome"
@@ -39,9 +50,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Welcome"
+            android:text="@string/welcome_text"
             android:textColor="#7B4310"
-            android:textSize="35sp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -49,10 +60,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Let’s discover \nand learn more about Wayang"
+            android:text="@string/welcome_subtext"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@id/tv_welcome"
             app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
@@ -61,163 +73,286 @@
             android:id="@+id/iv_startLearnBanner"
             android:layout_width="420dp"
             android:layout_height="190dp"
-            android:layout_marginStart="125dp"
             android:layout_marginTop="50dp"
+            android:layout_marginEnd="50dp"
             android:fontFamily="@font/roboto_bold"
             android:src="@drawable/start_learn2"
-            app:layout_constraintEnd_toEndOf="@id/tv_welcome"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_startLearingWayang"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="20dp"
-            android:text="Learn"
+            android:text="@string/learn_btn"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/iv_startLearnBanner"
             app:layout_constraintEnd_toEndOf="@+id/iv_startLearnBanner"
-            app:layout_constraintTop_toTopOf="@id/iv_startLearnBanner" />
+            app:layout_constraintTop_toTopOf="@id/iv_startLearnBanner"
+            app:rippleColor="@color/white"
+            app:strokeColor="@color/white" />
 
-        <Button
-            android:id="@+id/btn_scanWayang"
-            style="@style/buttonScanWhite"
-            android:layout_width="350dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/ripple_effect"
-            android:drawableEnd="@drawable/scan_icon_black"
-            android:elevation="10dp"
-            android:fontFamily="@font/roboto_bold"
-            android:padding="2dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="Start classify wayang"
-            app:layout_constraintEnd_toEndOf="parent"
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_ScanFromCamera"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_ScanFromGallery"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_startLearnBanner" />
+            app:layout_constraintTop_toBottomOf="@id/iv_startLearnBanner">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/start_classify_wayang"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/scanIcon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/scanIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_outline_photo_camera_24_black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_ScanFromGallery"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_ScanFromCamera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_ScanFromCamera"
+            app:layout_constraintTop_toTopOf="@+id/btn_ScanFromCamera">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:padding="3dp"
+                android:src="@drawable/ic_outline_image_search_24_black" />
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Gallery"
+            android:text="@string/wayang"
             android:textColor="#7B4310"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/btn_scanWayang"
-            app:layout_constraintTop_toBottomOf="@id/btn_scanWayang" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ScanFromCamera" />
 
         <TextView
             android:id="@+id/tv_showMoreGallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Show More"
-            android:textColor="@color/black"
+            android:text="@string/show_wayang_type"
+            android:textColor="@color/light_brown"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/iv_gallery"
             app:layout_constraintEnd_toEndOf="@id/iv_gallery" />
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ScanFromCamera"
+            tools:background="@drawable/slide_dummy"/>
+
+        <LinearLayout
+            android:id="@+id/dots_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/view_pager"
+            app:layout_constraintStart_toStartOf="@id/view_pager"
+            app:layout_constraintTop_toBottomOf="@id/view_pager" />
+
 
         <ImageView
             android:id="@+id/iv_gallery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
             android:foreground="?attr/selectableItemBackground"
-            android:src="@drawable/gallery_dummy1"
-            app:layout_constraintEnd_toEndOf="@id/btn_scanWayang"
-            app:layout_constraintStart_toStartOf="@id/btn_scanWayang"
-            app:layout_constraintTop_toBottomOf="@id/btn_scanWayang" />
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_ScanFromCamera" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="More Knowledge"
+            android:text="@string/more_knowledge"
             android:textColor="#7B4310"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/iv_gallery"
-            app:layout_constraintTop_toBottomOf="@id/iv_gallery" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dots_indicator" />
 
         <TextView
             android:id="@+id/tv_showMore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
             android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Show More"
-            android:textColor="@color/black"
+            android:text="@string/show_more"
+            android:textColor="@color/light_brown"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@id/iv_gallery"
-            app:layout_constraintTop_toBottomOf="@id/iv_gallery" />
+            app:layout_constraintTop_toBottomOf="@id/dots_indicator" />
 
         <HorizontalScrollView
             android:id="@+id/h_scrollview"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
             android:layout_marginTop="50dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@id/iv_gallery"
-            app:layout_constraintStart_toStartOf="@id/iv_gallery"
-            app:layout_constraintTop_toBottomOf="@id/iv_gallery">
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="@id/dots_indicator"
+            app:layout_constraintStart_toStartOf="@id/dots_indicator"
+            app:layout_constraintTop_toBottomOf="@id/dots_indicator">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="130dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/bio_dalang3" />
+                android:layout_height="match_parent">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/iv_bio_dalang"
-                    android:layout_width="180dp"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="20dp"
-                    android:backgroundTint="#E3E3E3"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="8dp">
+                    android:layout_width="170dp"
+                    android:layout_height="110dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/white"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="test" />
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/bio_dalang3" />
 
                 </androidx.cardview.widget.CardView>
 
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="130dp"
-                    android:src="@drawable/studio_museum2" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/iv_museum_studio"
+                    android:layout_width="170dp"
+                    android:layout_height="110dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/black"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp">
 
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="15dp"
-                    android:src="@drawable/studio_museum2" />
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/studio_museum2" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="40dp"
-                    android:src="@drawable/studio_museum" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/iv_wayang_stories"
+                    android:layout_width="170dp"
+                    android:layout_height="110dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/black"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/wayang_stories_icon" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/iv_show_more"
+                    android:layout_width="170dp"
+                    android:layout_height="110dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/black"
+                    app:cardCornerRadius="25dp"
+                    app:cardElevation="4dp">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="130dp"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingTop="8dp"
+                        android:src="@drawable/icon_show_more" />
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
         </HorizontalScrollView>
 

@@ -7,14 +7,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.dalangapp.MainActivity
 import com.example.dalangapp.databinding.ActivityDetailBinding
-import com.example.dalangapp.retrofit.responses.DataItem
-import com.example.dalangapp.retrofit.responses.WayangData
 
 class DetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
-
-
 
     companion object {
         const val EXTRA_PHOTO = "extra_photo"

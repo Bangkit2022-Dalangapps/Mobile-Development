@@ -2,22 +2,17 @@ package com.example.dalangapp.content
 
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.view.ActionMode
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dalangapp.MainActivity
-import com.example.dalangapp.R
 import com.example.dalangapp.adapter.MuseumStudioAdapter
-import com.example.dalangapp.adapter.StoriesAdapter
 import com.example.dalangapp.content.detail.DetailActivity
-import com.example.dalangapp.databinding.ActivityStoriesBinding
 import com.example.dalangapp.databinding.ActivityStudioMuseumBinding
 import com.example.dalangapp.retrofit.ApiConfig
 import com.example.dalangapp.retrofit.responses.ListMuseumStudioItems
-import com.example.dalangapp.retrofit.responses.ListStoryItems
 import com.example.dalangapp.retrofit.responses.MuseumStudioResponse
 import retrofit2.Call
 import retrofit2.Callback
@@ -26,7 +21,7 @@ import retrofit2.Response
 class StudioMuseumActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityStudioMuseumBinding
-    private lateinit var adapter : MuseumStudioAdapter
+    private lateinit var adapter: MuseumStudioAdapter
 
     private lateinit var sharedPreferences: SharedPreferences
     val listStoryItem = ArrayList<ListMuseumStudioItems>()
@@ -49,10 +44,10 @@ class StudioMuseumActivity : AppCompatActivity() {
         }
     }
 
-    private fun setMuseum(){
+    private fun setMuseum() {
         showLoading(true)
         val service = ApiConfig.getApiService(this).getMuseumStudio()
-        service.enqueue(object : Callback<MuseumStudioResponse>{
+        service.enqueue(object : Callback<MuseumStudioResponse> {
             override fun onResponse(
                 call: Call<MuseumStudioResponse>,
                 response: Response<MuseumStudioResponse>
@@ -86,7 +81,7 @@ class StudioMuseumActivity : AppCompatActivity() {
         })
     }
 
-    private fun initRv(){
+    private fun initRv() {
         adapter = MuseumStudioAdapter()
         binding.apply {
             rvMcv.layoutManager = LinearLayoutManager(this@StudioMuseumActivity)
@@ -100,7 +95,7 @@ class StudioMuseumActivity : AppCompatActivity() {
                         it.putExtra(DetailActivity.EXTRA_PHOTO, data.url)
                         it.putExtra(DetailActivity.EXTRA_NAME, data.name)
                         it.putExtra(DetailActivity.EXTRA_DESK, data.description)
-                        it.putExtra(DetailActivity.EXTRA_DESK1, "Lokasi : "+data.location)
+                        it.putExtra(DetailActivity.EXTRA_DESK1, "Lokasi : " + data.location)
                         startActivity(it)
                     }
                 }

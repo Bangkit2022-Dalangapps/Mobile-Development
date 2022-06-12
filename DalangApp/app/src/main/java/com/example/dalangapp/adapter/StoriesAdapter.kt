@@ -41,7 +41,8 @@ class StoriesAdapter : RecyclerView.Adapter<StoriesAdapter.McvViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): McvViewHolder {
-        val view = ItemMuseumCeritaVideoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val view =
+            ItemMuseumCeritaVideoBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return McvViewHolder(view)
     }
 

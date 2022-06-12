@@ -55,12 +55,6 @@
             android:name=".wayangcamera.WayangCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".wayangcamera.WayangClassificationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".wayangcamera.CameraActivity"
-            android:exported="false" />
-        <activity
             android:name=".content.StudioMuseumActivity"
             android:exported="false" />
         <activity
@@ -71,7 +65,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".content.VideoActivity"
             android:exported="false" />

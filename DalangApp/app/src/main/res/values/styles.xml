@@ -6,7 +6,6 @@
     <style name="buttonScanWhite" parent="ThemeOverlay.AppCompat">
         <item name="backgroundTint">#FFC884</item>
         <item name="android:textColor"> @color/black</item>
-        <item name="drawableEndCompat">@drawable/scan_icon_black</item>
         <item name="fontFamily">@font/roboto_bold</item>
     </style>
 
