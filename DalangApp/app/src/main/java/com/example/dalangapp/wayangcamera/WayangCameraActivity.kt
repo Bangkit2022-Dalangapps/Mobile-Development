@@ -175,7 +175,7 @@ class WayangCameraActivity : AppCompatActivity() {
                     binding.tvResultTitle.text = labels[max]
                     binding.btnCardGolek.setOnClickListener {
                         Intent(this, WayangDetailActivity::class.java).also {
-                            it.putExtra(WayangDetailActivity.EXTRA_ID, "5")
+                            it.putExtra(WayangDetailActivity.EXTRA_ID, "4")
                             startActivity(it)
                         }
                     }
@@ -197,7 +197,7 @@ class WayangCameraActivity : AppCompatActivity() {
                     binding.tvResultTitle.text = labels[max]
                     binding.btnCardKulit.setOnClickListener {
                         Intent(this, WayangDetailActivity::class.java).also {
-                            it.putExtra(WayangDetailActivity.EXTRA_ID, "3")
+                            it.putExtra(WayangDetailActivity.EXTRA_ID, "5")
                             startActivity(it)
                         }
                     }
@@ -208,7 +208,7 @@ class WayangCameraActivity : AppCompatActivity() {
                     binding.tvResultTitle.text = labels[max]
                     binding.btnCardSuluh.setOnClickListener {
                         Intent(this, WayangDetailActivity::class.java).also {
-                            it.putExtra(WayangDetailActivity.EXTRA_ID, "4")
+                            it.putExtra(WayangDetailActivity.EXTRA_ID, "3")
                             startActivity(it)
                         }
                     }
@@ -280,7 +280,7 @@ class WayangCameraActivity : AppCompatActivity() {
                     binding.tvResultTitle.text = labels[max]
                     binding.btnCardGolek.setOnClickListener {
                         Intent(this, WayangDetailActivity::class.java).also {
-                            it.putExtra(WayangDetailActivity.EXTRA_ID, "5")
+                            it.putExtra(WayangDetailActivity.EXTRA_ID, "4")
                             startActivity(it)
                         }
                     }
@@ -302,7 +302,7 @@ class WayangCameraActivity : AppCompatActivity() {
                     binding.tvResultTitle.text = labels[max]
                     binding.btnCardKulit.setOnClickListener {
                         Intent(this, WayangDetailActivity::class.java).also {
-                            it.putExtra(WayangDetailActivity.EXTRA_ID, "3")
+                            it.putExtra(WayangDetailActivity.EXTRA_ID, "5")
                             startActivity(it)
                         }
                     }
@@ -313,7 +313,7 @@ class WayangCameraActivity : AppCompatActivity() {
                     binding.tvResultTitle.text = labels[max]
                     binding.btnCardSuluh.setOnClickListener {
                         Intent(this, WayangDetailActivity::class.java).also {
-                            it.putExtra(WayangDetailActivity.EXTRA_ID, "4")
+                            it.putExtra(WayangDetailActivity.EXTRA_ID, "3")
                             startActivity(it)
                         }
                     }

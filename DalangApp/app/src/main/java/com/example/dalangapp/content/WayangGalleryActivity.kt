@@ -32,21 +32,21 @@ class WayangGalleryActivity : AppCompatActivity() {
 
         binding.ivKulit.setOnClickListener {
             Intent(this, WayangDetailActivity::class.java).also {
-                it.putExtra(WayangDetailActivity.EXTRA_ID, "3")
+                it.putExtra(WayangDetailActivity.EXTRA_ID, "5")
                 startActivity(it)
             }
         }
 
         binding.ivSuluh.setOnClickListener {
             Intent(this, WayangDetailActivity::class.java).also {
-                it.putExtra(WayangDetailActivity.EXTRA_ID, "4")
+                it.putExtra(WayangDetailActivity.EXTRA_ID, "3")
                 startActivity(it)
             }
         }
 
         binding.ivGolek.setOnClickListener {
             Intent(this, WayangDetailActivity::class.java).also {
-                it.putExtra(WayangDetailActivity.EXTRA_ID, "5")
+                it.putExtra(WayangDetailActivity.EXTRA_ID, "4")
                 startActivity(it)
             }
         }
